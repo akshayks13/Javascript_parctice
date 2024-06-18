@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <script>
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        document.writeln("Object before deleting rollno property:<br>");
+        document.writeln("Name :"+student.name);
+        document.writeln("sclass :"+student.sclass);
+        document.writeln("rollno :"+student.rollno +"<br>");
+
+        delete student.rollno;
+
+        document.writeln("Object after deleting rollno property:<br>");
+        document.writeln("Name :"+student.name);
+        document.writeln("sclass :"+student.sclass);
+        document.writeln("rollno :"+student.rollno);
+    </script>
+    
+</body>
+</html>

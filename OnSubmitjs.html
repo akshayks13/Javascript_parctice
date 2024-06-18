@@ -1,0 +1,21 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+          function myFunction() {
+               var n = document.getElementById("Name").value;
+               if(n ==""){
+                  alert("The form is not submitted <Enter the name")
+               }
+               else{
+                  confirm("Your form has been submitted");
+               }
+            }            
+     </script>      
+   </head>
+   
+   <body>
+      <form onsubmit="myFunction()">
+         Enter name: <input id="Name" type="text">
+         <input type="submit">
+       </form>
+</html>

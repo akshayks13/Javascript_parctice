@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+</head>
+<body>
+    <script>
+        var s = "dog";
+        var l =[];
+        for(var i=0;i<s.length;i++){
+            for(var j=0;j<=s.length;j++){
+                var r =s.substring(j,i)
+                if(l.includes(r)==false && r!=''){
+                    l.push(s.substring(j,i));
+                }
+            }
+        }
+
+        document.write(l)
+
+    </script>
+</body>
+</html>

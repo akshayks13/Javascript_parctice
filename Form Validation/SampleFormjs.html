@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+.error {
+  color: red;
+}
+ 
+input:invalid {
+  border: 2px solid red;
+}
+ 
+input:valid {
+  border: 2px solid rgb(20, 241, 20);
+}
+</style>
+</head>
+<body>
+ 
+<h2>Form Validation Example</h2>
+ 
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required minlength="2" maxlength="50"><br>
+  <span class="error" id="nameError"></span><br>
+ 
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <span class="error" id="emailError"></span><br>
+ 
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required minlength="6"><br>
+  <span class="error" id="passwordError"></span><br>
+ 
+  <input type="submit" value="Submit">
+</form>
+ 
+<script>
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var isValid = true;
+ 
+  // Validate Name
+  if (name == "") {
+    document.getElementById("nameError").innerHTML = "Name is required";
+    isValid = false;
+  } else if (name.length < 2 || name.length > 50) {
+    document.getElementById("nameError").innerHTML = "Name must be between 2 and 50 characters long";
+    isValid = false;
+  } else {
+    document.getElementById("nameError").innerHTML = "";
+  }
+ 
+  // Validate Email
+  if (email == "") {
+    document.getElementById("emailError").innerHTML = "Email is required";
+    isValid = false;
+  } else {
+    document.getElementById("emailError").innerHTML = "";
+  }
+ 
+  // Validate Password
+  if (password == "") {
+    document.getElementById("passwordError").innerHTML = "Password is required";
+    isValid = false;
+  } else if (password.length < 6) {
+    document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters long";
+    isValid = false;
+  } else {
+    document.getElementById("passwordError").innerHTML = "";
+  }
+ 
+  return isValid;
+}
+</script>
+ 
+</body>
+</html>

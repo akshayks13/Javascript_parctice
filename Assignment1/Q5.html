@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+
+        function cylinder(radius ,height){
+            this.radius = r;
+            this.height = h; 
+
+            var volume = Math.PI * radius*radius*height
+            return volume
+        }
+
+        var r =window.prompt("Enter the Radius")
+        var h =window.prompt("Enter the height")
+
+        document.writeln("Radius : "+r+"<br>")
+        document.writeln("Height : "+h+"<br>")
+        document.writeln("The Volume of the cylinder is : ")
+        document.writeln(cylinder(r,h))
+        
+    </script>
+    
+</body>
+</html>
